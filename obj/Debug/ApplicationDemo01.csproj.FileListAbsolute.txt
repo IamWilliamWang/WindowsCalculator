@@ -1,0 +1,12 @@
+F:\Visual Studio 2015\ApplicationDemo01\bin\Debug\ApplicationDemo01.exe.config
+F:\Visual Studio 2015\ApplicationDemo01\bin\Debug\ApplicationDemo01.exe
+F:\Visual Studio 2015\ApplicationDemo01\bin\Debug\ApplicationDemo01.pdb
+F:\Visual Studio 2015\ApplicationDemo01\obj\Debug\ApplicationDemo01.csprojResolveAssemblyReference.cache
+F:\Visual Studio 2015\ApplicationDemo01\obj\Debug\ApplicationDemo01.Properties.Resources.resources
+F:\Visual Studio 2015\ApplicationDemo01\obj\Debug\ApplicationDemo01.csproj.GenerateResource.Cache
+F:\Visual Studio 2015\ApplicationDemo01\obj\Debug\ApplicationDemo01.exe
+F:\Visual Studio 2015\ApplicationDemo01\obj\Debug\ApplicationDemo01.pdb
+F:\Visual Studio 2015\ApplicationDemo01\obj\Debug\ApplicationDemo01.MainWindow.resources
+F:\Visual Studio 2015\Calculator\bin\Debug\ApplicationDemo01.exe.config
+F:\Visual Studio 2015\Calculator\obj\Debug\ApplicationDemo01.exe
+F:\Visual Studio 2015\Calculator\obj\Debug\ApplicationDemo01.pdb
