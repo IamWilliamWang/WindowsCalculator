@@ -6,3 +6,15 @@ F:\Visual Studio 2015\Calculator\obj\Release\Calculator.Properties.Resources.res
 F:\Visual Studio 2015\Calculator\obj\Release\Calculator.csproj.GenerateResource.Cache
 F:\Visual Studio 2015\Calculator\obj\Release\Calculator.exe
 F:\Visual Studio 2015\Calculator\obj\Release\Calculator.pdb
+F:\Visual Studio 2015\WindowsCalculator\bin\Release\Calculator.exe.config
+F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.exe
+F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.pdb
+F:\Visual Studio 2015\WindowsCalculator\bin\Release\Calculator.exe.manifest
+F:\Visual Studio 2015\WindowsCalculator\bin\Release\Calculator.application
+F:\Visual Studio 2015\WindowsCalculator\bin\Release\Calculator.exe
+F:\Visual Studio 2015\WindowsCalculator\bin\Release\Calculator.pdb
+F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.MainWindow.resources
+F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.Properties.Resources.resources
+F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.csproj.GenerateResource.Cache
+F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.exe.manifest
+F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.application
