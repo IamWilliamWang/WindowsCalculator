@@ -36,7 +36,7 @@
     <StartupObject>Calculator.MyApplication</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>www.ico.la_b7add104006abe46a26a7f441cbe8963_48X48.ico</ApplicationIcon>
+    <ApplicationIcon>programIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -88,7 +88,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="www.ico.la_b7add104006abe46a26a7f441cbe8963_48X48.ico" />
+    <Content Include="programIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

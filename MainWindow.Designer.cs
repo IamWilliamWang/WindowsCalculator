@@ -56,14 +56,18 @@
             this.clickButton_7 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.StripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.新窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查看mToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.历史纪录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.清空全部ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.文本框ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.升级日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ResultGroupBox = new System.Windows.Forms.GroupBox();
             this.resultTextBox = new System.Windows.Forms.TextBox();
-            this.清空全部ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inputGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.ResultGroupBox.SuspendLayout();
@@ -356,6 +360,7 @@
             // StripMenuItem1
             // 
             this.StripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.新窗口ToolStripMenuItem,
             this.查看mToolStripMenuItem,
             this.历史纪录ToolStripMenuItem,
             this.清空全部ToolStripMenuItem,
@@ -364,41 +369,81 @@
             this.StripMenuItem1.Size = new System.Drawing.Size(56, 21);
             this.StripMenuItem1.Text = "主菜单";
             // 
+            // 新窗口ToolStripMenuItem
+            // 
+            this.新窗口ToolStripMenuItem.Enabled = false;
+            this.新窗口ToolStripMenuItem.Name = "新窗口ToolStripMenuItem";
+            this.新窗口ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.新窗口ToolStripMenuItem.Text = "新窗口";
+            this.新窗口ToolStripMenuItem.Click += new System.EventHandler(this.新窗口ToolStripMenuItem_Click);
+            // 
             // 查看mToolStripMenuItem
             // 
             this.查看mToolStripMenuItem.Name = "查看mToolStripMenuItem";
-            this.查看mToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.查看mToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.查看mToolStripMenuItem.Text = "查看M";
             this.查看mToolStripMenuItem.Click += new System.EventHandler(this.查看mToolStripMenuItem_Click);
             // 
             // 历史纪录ToolStripMenuItem
             // 
             this.历史纪录ToolStripMenuItem.Name = "历史纪录ToolStripMenuItem";
-            this.历史纪录ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.历史纪录ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.历史纪录ToolStripMenuItem.Text = "历史纪录";
             this.历史纪录ToolStripMenuItem.Click += new System.EventHandler(this.历史纪录ToolStripMenuItem_Click);
+            // 
+            // 清空全部ToolStripMenuItem
+            // 
+            this.清空全部ToolStripMenuItem.Name = "清空全部ToolStripMenuItem";
+            this.清空全部ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.清空全部ToolStripMenuItem.Text = "清空全部";
+            this.清空全部ToolStripMenuItem.Click += new System.EventHandler(this.清空全部ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // StripMenuItem2
             // 
             this.StripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.关于ToolStripMenuItem});
+            this.文本框ToolStripMenuItem,
+            this.帮助ToolStripMenuItem});
             this.StripMenuItem2.Name = "StripMenuItem2";
             this.StripMenuItem2.Size = new System.Drawing.Size(44, 21);
             this.StripMenuItem2.Text = "帮助";
             // 
-            // 关于ToolStripMenuItem
+            // 文本框ToolStripMenuItem
             // 
-            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.关于ToolStripMenuItem.Text = "关于";
-            this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem1_Click);
+            this.文本框ToolStripMenuItem.Name = "文本框ToolStripMenuItem";
+            this.文本框ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.文本框ToolStripMenuItem.Text = "释放文本框";
+            this.文本框ToolStripMenuItem.Click += new System.EventHandler(this.文本框ToolStripMenuItem_Click);
+            // 
+            // 帮助ToolStripMenuItem
+            // 
+            this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.升级日志ToolStripMenuItem,
+            this.关于ToolStripMenuItem1});
+            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.帮助ToolStripMenuItem.Text = "帮助";
+            //this.帮助ToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem1_Click);
+            // 
+            // 升级日志ToolStripMenuItem
+            // 
+            this.升级日志ToolStripMenuItem.Name = "升级日志ToolStripMenuItem";
+            this.升级日志ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.升级日志ToolStripMenuItem.Text = "升级日志";
+            this.升级日志ToolStripMenuItem.Click += new System.EventHandler(this.升级日志ToolStripMenuItem_Click);
+            // 
+            // 关于ToolStripMenuItem1
+            // 
+            this.关于ToolStripMenuItem1.Name = "关于ToolStripMenuItem1";
+            this.关于ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.关于ToolStripMenuItem1.Text = "关于本程序";
+            this.关于ToolStripMenuItem1.Click += new System.EventHandler(this.关于ToolStripMenuItem1_Click);
             // 
             // ResultGroupBox
             // 
@@ -420,13 +465,6 @@
             this.resultTextBox.TabIndex = 0;
             this.resultTextBox.Text = "0";
             this.resultTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // 清空全部ToolStripMenuItem
-            // 
-            this.清空全部ToolStripMenuItem.Name = "清空全部ToolStripMenuItem";
-            this.清空全部ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.清空全部ToolStripMenuItem.Text = "清空全部";
-            this.清空全部ToolStripMenuItem.Click += new System.EventHandler(this.清空全部ToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -460,7 +498,7 @@
         private System.Windows.Forms.ToolStripMenuItem 查看mToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem StripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.Button clickButton_divide;
         private System.Windows.Forms.Button clickButton_Equal;
         private System.Windows.Forms.Button clickButton_dot;
@@ -489,6 +527,10 @@
         private System.Windows.Forms.Button buttonBracketLeft;
         private System.Windows.Forms.ToolStripMenuItem 历史纪录ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 清空全部ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 新窗口ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 文本框ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 升级日志ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem1;
     }
 
 }
