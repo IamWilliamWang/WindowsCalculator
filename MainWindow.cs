@@ -10,7 +10,7 @@ namespace Calculator
         private String saves = "";
         private Boolean editTextBoxEditable = false;
         private String LatestResult;
-
+        private Boolean LastestVisualable;
 
         private String Information = "计算器 v1.11";
         private String UpdateInformation =
@@ -41,6 +41,7 @@ namespace Calculator
             resultTextBox.Text = "0";
             mNumber = 0;
             saves = "";
+            LastestVisualable = false;
             MessageBox.Show("清除成功！", "成功", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
@@ -100,20 +101,29 @@ namespace Calculator
                     break;
                 case "M+":
                     int index;
-                    if ((index = inputString.LastIndexOf('=')) != -1)
+                    if ((index = resultTextBox.Text.LastIndexOf('=')) != -1)
                     {
-                        mNumber += Double.Parse(inputString.Substring(index + 1));
+                        mNumber += Double.Parse(resultTextBox.Text.Substring(index + 1));
                     }
                     else
                         MessageBox.Show("请先按下等号。", "Tips", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case "C":
-                    inputString = inputString.Remove(inputString.LastIndexOfAny(CalculatorProgram.yunsuanfu.ToCharArray()));
-                    resultTextBox.Text = inputString;
+                    int indexTemp = inputString.LastIndexOfAny(CalculatorProgram.yunsuanfu.ToCharArray());
+                    if(inputString=="")
+                    {
+                        resultTextBox.Text = "0";
+                    }
+                    else
+                    {
+                        inputString = inputString.Remove(indexTemp);
+                        resultTextBox.Text = inputString;
+                    }
                     break;
                 case "AC":
                     inputString = "";
                     resultTextBox.Text = "0";
+                    LastestVisualable = false;
                     break;
                 case "←":
                     if (inputString.Length != 0)
@@ -143,6 +153,7 @@ namespace Calculator
                     //Console.WriteLine("结果是 " + result);
                     LatestResult = inputString.Substring(inputString.IndexOf('=')+1);//储存最后一次结果
                     inputString = "";
+                    LastestVisualable = true;
                     break;
                 case "(":
                 case ")":
@@ -151,8 +162,9 @@ namespace Calculator
                 case "*":
                 case "/":
                 case ".":
-                    inputString += LatestResult + clickevent.Text;
+                    inputString += (LastestVisualable ? LatestResult:"") + clickevent.Text;
                     resultTextBox.Text = inputString;
+                    LastestVisualable = false;
                     break;
                 case "0":
                 case "1":
@@ -166,12 +178,9 @@ namespace Calculator
                 case "9":
                     inputString += clickevent.Text;
                     resultTextBox.Text = inputString;
+                    LastestVisualable = false;
                     break;
             }
         }
-
-        
-
-        
     }
 }

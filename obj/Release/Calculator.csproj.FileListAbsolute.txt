@@ -18,3 +18,4 @@ F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.Properties.Resour
 F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.csproj.GenerateResource.Cache
 F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.exe.manifest
 F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.application
+F:\Visual Studio 2015\WindowsCalculator\obj\Release\Calculator.csprojResolveAssemblyReference.cache

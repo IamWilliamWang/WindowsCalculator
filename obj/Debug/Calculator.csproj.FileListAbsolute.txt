@@ -16,3 +16,7 @@ F:\Visual Studio 2015\WindowsCalculator\obj\Debug\Calculator.csprojResolveAssemb
 F:\Visual Studio 2015\WindowsCalculator\obj\Debug\Calculator.MainWindow.resources
 F:\Visual Studio 2015\WindowsCalculator\obj\Debug\Calculator.Properties.Resources.resources
 F:\Visual Studio 2015\WindowsCalculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+F:\Visual Studio 2015\WindowsCalculator\bin\Debug\Calculator.exe.manifest
+F:\Visual Studio 2015\WindowsCalculator\bin\Debug\Calculator.application
+F:\Visual Studio 2015\WindowsCalculator\obj\Debug\Calculator.exe.manifest
+F:\Visual Studio 2015\WindowsCalculator\obj\Debug\Calculator.application
