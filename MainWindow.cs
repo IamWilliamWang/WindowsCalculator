@@ -12,13 +12,14 @@ namespace Calculator
         private String LatestResult;
         private Boolean LastestVisualable;
 
-        private String Information = "计算器 v1.11";
+        private String Information = "计算器 v1.15";
         private String UpdateInformation =
             "v0.91 实现了基本的+-*/功能\n"+
             "v0.99 添加了菜单栏、帮助栏，修复了bug\n"+ 
             "v1.00 查看M值、历史纪录，增加了升级日志\n"+
-            "v1.10 能释放文本框，计算结果可以直接使用\n"+
-            "v1.15(未完成)可增加新窗口";
+            "v1.10 能释放文本框，计算结果下次可以直接使用\n"+
+            "v1.11 修复了C键，上次的计算结果影响下次输入的bug\n"+
+            "v1.15 可增加新窗口，解决负数不能计算的bug";
 
         public MainWindow()
         {
@@ -139,7 +140,7 @@ namespace Calculator
                     }
                     try
                     {
-                        double result = CalculatorProgram.getResult(inputString);
+                        double result = CalculatorProgram.getResult("0"+inputString);
                         inputString = inputString + "=" + result;
                         resultTextBox.Text = inputString;
                     }
@@ -181,6 +182,12 @@ namespace Calculator
                     LastestVisualable = false;
                     break;
             }
+        }
+
+        private void piToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            inputString += "3.14159265358979323846264";
+            resultTextBox.Text = inputString;
         }
     }
 }
