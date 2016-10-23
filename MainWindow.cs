@@ -48,7 +48,8 @@ namespace Calculator
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("此操作将清除所有数据。", "是否退出？", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if(dialogResult==DialogResult.OK)    Application.Exit();
         }
 
         private void 升级日志ToolStripMenuItem_Click(object sender, EventArgs e)
