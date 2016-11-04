@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -12,14 +13,15 @@ namespace Calculator
         private String LatestResult;
         private Boolean LastestVisualable;
 
-        private String Information = "计算器 v1.15";
+        private String Information = "计算器 v1.20";
         private String UpdateInformation =
             "v0.91 实现了基本的+-*/功能\n"+
             "v0.99 添加了菜单栏、帮助栏，修复了bug\n"+ 
             "v1.00 查看M值、历史纪录，增加了升级日志\n"+
             "v1.10 能释放文本框，计算结果下次可以直接使用\n"+
             "v1.11 修复了C键，上次的计算结果影响下次输入的bug\n"+
-            "v1.15 可增加新窗口，解决负数不能计算的bug";
+            "v1.15 可增加新窗口，解决负数不能计算的bug\n"+
+            "v1.20 可使用基本的乘方、开方、阶乘、三角函数等运算";
 
         public MainWindow()
         {
@@ -48,8 +50,10 @@ namespace Calculator
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("此操作将清除所有数据。", "是否退出？", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if(dialogResult==DialogResult.OK)    Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("退出所有窗口？还是退出此窗口？", "退出提示", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.No) this.Close();
+            else if (dialogResult == DialogResult.Yes) Application.Exit();
+            
         }
 
         private void 升级日志ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -64,8 +68,8 @@ namespace Calculator
 
         private void 新窗口ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.EnableVisualStyles();
-            Application.Run(new MainWindow());
+            MainWindow mainwindow = new MainWindow();
+            mainwindow.ShowDialog();
         }
 
         private void 文本框ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -185,9 +189,154 @@ namespace Calculator
             }
         }
 
-        private void piToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void functionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            inputString += "3.14159265358979323846264";
+            ToolStripMenuItem tmi = (ToolStripMenuItem)sender;
+            double result = 0;
+            
+            switch(tmi.Text)
+            {
+                case "pi":
+                    result = 3.14159265358979323846264;
+                    break;
+                case "x^2":
+                    String input = Interaction.InputBox("输入x:", "x^2");
+                    if (input == "")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = double.Parse(input) * double.Parse(input);
+                    break;
+                case "1/x":
+                    String input2 = Interaction.InputBox("输入x:", "1/x");
+                    if (input2 == "" || input2 == "0")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = 1 / double.Parse(input2);
+                    break;
+                case "x^y":
+                    String input3 = Interaction.InputBox("输入x^y:", "x^y");
+                    if (input3 == "")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = Math.Pow(double.Parse(input3.Split('^')[0]),double.Parse(input3.Split('^')[1]));
+                    break;
+                case "√x":
+                    String input3_ = Interaction.InputBox("输入x^y:", "x^y");
+                    if (input3_ == "")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = Math.Sqrt(double.Parse(input3_));
+                    break;
+                case "x!":
+                    String input4 = Interaction.InputBox("输入x:", "x!");
+                    if (input4 == "")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    int sum = 1;
+                    for(int i=1;i<=double.Parse(input4);i++)
+                    {
+                        sum *= i;
+                    }
+                    MessageBox.Show(sum.ToString(),"结果");
+                    return;
+                case "sin(x)":
+                    String input5 = Interaction.InputBox("输入x:", "sin(x) x使用弧度");
+                    if (input5 == "" || input5 == "0")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = Math.Sin(double.Parse(input5));
+                    break;
+                case "cos(x)":
+                    String input6 = Interaction.InputBox("输入x:", "cos(x) x使用弧度");
+                    if (input6 == "" || input6 == "0")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = Math.Cos(double.Parse(input6));
+                    break;
+                case "tan(x)":
+                    String input7 = Interaction.InputBox("输入x:", "tan(x) x使用弧度");
+                    if (input7 == "" || input7 == "0")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = Math.Tan(double.Parse(input7));
+                    break;
+                case "asin(x)":
+                    String input8 = Interaction.InputBox("输入x:", "asin(x) x使用弧度");
+                    if (input8 == "" || input8 == "0")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = Math.Asin(double.Parse(input8));
+                    break;
+                case "acos(x)":
+                    String input9 = Interaction.InputBox("输入x:", "acos(x) x使用弧度");
+                    if (input9 == "" || input9 == "0")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = Math.Acos(double.Parse(input9));
+                    break;
+                case "atan(x)":
+                    String input10 = Interaction.InputBox("输入x:", "atan(x) x使用弧度");
+                    if (input10 == "" || input10 == "0")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = Math.Atan(double.Parse(input10));
+                    break;
+                case "sinh(x)":
+                    String input11 = Interaction.InputBox("输入x:", "sinh(x) x使用弧度");
+                    if (input11 == "" || input11 == "0")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = Math.Sinh(double.Parse(input11));
+                    break;
+                case "cosh(x)":
+                    String input12 = Interaction.InputBox("输入x:", "cosh(x) x使用弧度");
+                    if (input12 == "" || input12 == "0")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = Math.Cosh(double.Parse(input12));
+                    break;
+                case "tanh(x)":
+                    String input13 = Interaction.InputBox("输入x:", "tanh(x) x使用弧度");
+                    if (input13 == "" || input13 == "0")
+                    {
+                        MessageBox.Show("非法输入");
+                        return;
+                    }
+                    result = Math.Tanh(double.Parse(input13));
+                    break;
+                
+                default:
+                    MessageBox.Show("未知错误","ERROR");
+                    break;
+            }
+
+            inputString += result.ToString();
             resultTextBox.Text = inputString;
         }
     }

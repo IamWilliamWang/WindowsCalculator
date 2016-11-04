@@ -61,20 +61,8 @@
             this.历史纪录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.清空全部ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.拓展StripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.文本框ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.升级日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ResultGroupBox = new System.Windows.Forms.GroupBox();
-            this.resultTextBox = new System.Windows.Forms.TextBox();
             this.常用函数ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sinxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.piToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.三角函数ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.piToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sinxToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.asinxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cosxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,6 +72,19 @@
             this.sinhxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coshxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tanhxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.piToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sinxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.piToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.拓展StripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.文本框ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.升级日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ResultGroupBox = new System.Windows.Forms.GroupBox();
+            this.resultTextBox = new System.Windows.Forms.TextBox();
+            this.sqrtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inputGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.ResultGroupBox.SuspendLayout();
@@ -388,39 +389,166 @@
             // 
             // 新窗口ToolStripMenuItem
             // 
-            this.新窗口ToolStripMenuItem.Enabled = false;
             this.新窗口ToolStripMenuItem.Name = "新窗口ToolStripMenuItem";
-            this.新窗口ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新窗口ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.新窗口ToolStripMenuItem.Text = "新窗口";
             this.新窗口ToolStripMenuItem.Click += new System.EventHandler(this.新窗口ToolStripMenuItem_Click);
             // 
             // 查看mToolStripMenuItem
             // 
             this.查看mToolStripMenuItem.Name = "查看mToolStripMenuItem";
-            this.查看mToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.查看mToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.查看mToolStripMenuItem.Text = "查看M";
             this.查看mToolStripMenuItem.Click += new System.EventHandler(this.查看mToolStripMenuItem_Click);
             // 
             // 历史纪录ToolStripMenuItem
             // 
             this.历史纪录ToolStripMenuItem.Name = "历史纪录ToolStripMenuItem";
-            this.历史纪录ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.历史纪录ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.历史纪录ToolStripMenuItem.Text = "历史纪录";
             this.历史纪录ToolStripMenuItem.Click += new System.EventHandler(this.历史纪录ToolStripMenuItem_Click);
             // 
             // 清空全部ToolStripMenuItem
             // 
             this.清空全部ToolStripMenuItem.Name = "清空全部ToolStripMenuItem";
-            this.清空全部ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.清空全部ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.清空全部ToolStripMenuItem.Text = "清空全部";
             this.清空全部ToolStripMenuItem.Click += new System.EventHandler(this.清空全部ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
+            // 
+            // 常用函数ToolStripMenuItem
+            // 
+            this.常用函数ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.三角函数ToolStripMenuItem,
+            this.piToolStripMenuItem1,
+            this.sinxToolStripMenuItem,
+            this.piToolStripMenuItem,
+            this.xyToolStripMenuItem,
+            this.xToolStripMenuItem,
+            this.sqrtToolStripMenuItem});
+            this.常用函数ToolStripMenuItem.Name = "常用函数ToolStripMenuItem";
+            this.常用函数ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.常用函数ToolStripMenuItem.Text = "常用函数";
+            // 
+            // 三角函数ToolStripMenuItem
+            // 
+            this.三角函数ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sinxToolStripMenuItem1,
+            this.asinxToolStripMenuItem,
+            this.cosxToolStripMenuItem,
+            this.acosxToolStripMenuItem,
+            this.tanxToolStripMenuItem,
+            this.atanxToolStripMenuItem,
+            this.sinhxToolStripMenuItem,
+            this.coshxToolStripMenuItem,
+            this.tanhxToolStripMenuItem});
+            this.三角函数ToolStripMenuItem.Name = "三角函数ToolStripMenuItem";
+            this.三角函数ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.三角函数ToolStripMenuItem.Text = "三角函数";
+            // 
+            // sinxToolStripMenuItem1
+            // 
+            this.sinxToolStripMenuItem1.Name = "sinxToolStripMenuItem1";
+            this.sinxToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.sinxToolStripMenuItem1.Text = "sin(x)";
+            this.sinxToolStripMenuItem1.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // asinxToolStripMenuItem
+            // 
+            this.asinxToolStripMenuItem.Name = "asinxToolStripMenuItem";
+            this.asinxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.asinxToolStripMenuItem.Text = "asin(x)";
+            this.asinxToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // cosxToolStripMenuItem
+            // 
+            this.cosxToolStripMenuItem.Name = "cosxToolStripMenuItem";
+            this.cosxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cosxToolStripMenuItem.Text = "cos(x)";
+            this.cosxToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // acosxToolStripMenuItem
+            // 
+            this.acosxToolStripMenuItem.Name = "acosxToolStripMenuItem";
+            this.acosxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.acosxToolStripMenuItem.Text = "acos(x)";
+            this.acosxToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // tanxToolStripMenuItem
+            // 
+            this.tanxToolStripMenuItem.Name = "tanxToolStripMenuItem";
+            this.tanxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tanxToolStripMenuItem.Text = "tan(x)";
+            this.tanxToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // atanxToolStripMenuItem
+            // 
+            this.atanxToolStripMenuItem.Name = "atanxToolStripMenuItem";
+            this.atanxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.atanxToolStripMenuItem.Text = "atan(x)";
+            this.atanxToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // sinhxToolStripMenuItem
+            // 
+            this.sinhxToolStripMenuItem.Name = "sinhxToolStripMenuItem";
+            this.sinhxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sinhxToolStripMenuItem.Text = "sinh(x)";
+            this.sinhxToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // coshxToolStripMenuItem
+            // 
+            this.coshxToolStripMenuItem.Name = "coshxToolStripMenuItem";
+            this.coshxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.coshxToolStripMenuItem.Text = "cosh(x)";
+            this.coshxToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // tanhxToolStripMenuItem
+            // 
+            this.tanhxToolStripMenuItem.Name = "tanhxToolStripMenuItem";
+            this.tanhxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tanhxToolStripMenuItem.Text = "tanh(x)";
+            this.tanhxToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // piToolStripMenuItem1
+            // 
+            this.piToolStripMenuItem1.Name = "piToolStripMenuItem1";
+            this.piToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.piToolStripMenuItem1.Text = "pi";
+            this.piToolStripMenuItem1.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // sinxToolStripMenuItem
+            // 
+            this.sinxToolStripMenuItem.Name = "sinxToolStripMenuItem";
+            this.sinxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sinxToolStripMenuItem.Text = "x^2";
+            this.sinxToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // piToolStripMenuItem
+            // 
+            this.piToolStripMenuItem.Name = "piToolStripMenuItem";
+            this.piToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.piToolStripMenuItem.Text = "1/x";
+            this.piToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // xyToolStripMenuItem
+            // 
+            this.xyToolStripMenuItem.Name = "xyToolStripMenuItem";
+            this.xyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xyToolStripMenuItem.Text = "x^y";
+            this.xyToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
+            // 
+            // xToolStripMenuItem
+            // 
+            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
+            this.xToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xToolStripMenuItem.Text = "x!";
+            this.xToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
             // 
             // 拓展StripMenuItem
             // 
@@ -482,132 +610,12 @@
             this.resultTextBox.Text = "0";
             this.resultTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // 常用函数ToolStripMenuItem
+            // sqrtToolStripMenuItem
             // 
-            this.常用函数ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.三角函数ToolStripMenuItem,
-            this.piToolStripMenuItem1,
-            this.sinxToolStripMenuItem,
-            this.piToolStripMenuItem,
-            this.xyToolStripMenuItem,
-            this.xToolStripMenuItem});
-            this.常用函数ToolStripMenuItem.Name = "常用函数ToolStripMenuItem";
-            this.常用函数ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.常用函数ToolStripMenuItem.Text = "常用函数";
-            // 
-            // sinxToolStripMenuItem
-            // 
-            this.sinxToolStripMenuItem.Enabled = false;
-            this.sinxToolStripMenuItem.Name = "sinxToolStripMenuItem";
-            this.sinxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sinxToolStripMenuItem.Text = "x^2";
-            // 
-            // piToolStripMenuItem
-            // 
-            this.piToolStripMenuItem.Enabled = false;
-            this.piToolStripMenuItem.Name = "piToolStripMenuItem";
-            this.piToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.piToolStripMenuItem.Text = "1/x";
-            // 
-            // xyToolStripMenuItem
-            // 
-            this.xyToolStripMenuItem.Enabled = false;
-            this.xyToolStripMenuItem.Name = "xyToolStripMenuItem";
-            this.xyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.xyToolStripMenuItem.Text = "x^y";
-            // 
-            // xToolStripMenuItem
-            // 
-            this.xToolStripMenuItem.Enabled = false;
-            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.xToolStripMenuItem.Text = "x!";
-            // 
-            // 三角函数ToolStripMenuItem
-            // 
-            this.三角函数ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sinxToolStripMenuItem1,
-            this.asinxToolStripMenuItem,
-            this.cosxToolStripMenuItem,
-            this.acosxToolStripMenuItem,
-            this.tanxToolStripMenuItem,
-            this.atanxToolStripMenuItem,
-            this.sinhxToolStripMenuItem,
-            this.coshxToolStripMenuItem,
-            this.tanhxToolStripMenuItem});
-            this.三角函数ToolStripMenuItem.Name = "三角函数ToolStripMenuItem";
-            this.三角函数ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.三角函数ToolStripMenuItem.Text = "三角函数";
-            // 
-            // piToolStripMenuItem1
-            // 
-            this.piToolStripMenuItem1.Name = "piToolStripMenuItem1";
-            this.piToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.piToolStripMenuItem1.Text = "pi";
-            this.piToolStripMenuItem1.Click += new System.EventHandler(this.piToolStripMenuItem1_Click);
-            // 
-            // sinxToolStripMenuItem1
-            // 
-            this.sinxToolStripMenuItem1.Enabled = false;
-            this.sinxToolStripMenuItem1.Name = "sinxToolStripMenuItem1";
-            this.sinxToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.sinxToolStripMenuItem1.Text = "sin(x)";
-            // 
-            // asinxToolStripMenuItem
-            // 
-            this.asinxToolStripMenuItem.Enabled = false;
-            this.asinxToolStripMenuItem.Name = "asinxToolStripMenuItem";
-            this.asinxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.asinxToolStripMenuItem.Text = "asin(x)";
-            // 
-            // cosxToolStripMenuItem
-            // 
-            this.cosxToolStripMenuItem.Enabled = false;
-            this.cosxToolStripMenuItem.Name = "cosxToolStripMenuItem";
-            this.cosxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cosxToolStripMenuItem.Text = "cos(x)";
-            // 
-            // acosxToolStripMenuItem
-            // 
-            this.acosxToolStripMenuItem.Enabled = false;
-            this.acosxToolStripMenuItem.Name = "acosxToolStripMenuItem";
-            this.acosxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.acosxToolStripMenuItem.Text = "acos(x)";
-            // 
-            // tanxToolStripMenuItem
-            // 
-            this.tanxToolStripMenuItem.Enabled = false;
-            this.tanxToolStripMenuItem.Name = "tanxToolStripMenuItem";
-            this.tanxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.tanxToolStripMenuItem.Text = "tan(x)";
-            // 
-            // atanxToolStripMenuItem
-            // 
-            this.atanxToolStripMenuItem.Enabled = false;
-            this.atanxToolStripMenuItem.Name = "atanxToolStripMenuItem";
-            this.atanxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.atanxToolStripMenuItem.Text = "atan(x)";
-            // 
-            // sinhxToolStripMenuItem
-            // 
-            this.sinhxToolStripMenuItem.Enabled = false;
-            this.sinhxToolStripMenuItem.Name = "sinhxToolStripMenuItem";
-            this.sinhxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sinhxToolStripMenuItem.Text = "sinh(x)";
-            // 
-            // coshxToolStripMenuItem
-            // 
-            this.coshxToolStripMenuItem.Enabled = false;
-            this.coshxToolStripMenuItem.Name = "coshxToolStripMenuItem";
-            this.coshxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.coshxToolStripMenuItem.Text = "cosh(x)";
-            // 
-            // tanhxToolStripMenuItem
-            // 
-            this.tanhxToolStripMenuItem.Enabled = false;
-            this.tanhxToolStripMenuItem.Name = "tanhxToolStripMenuItem";
-            this.tanhxToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.tanhxToolStripMenuItem.Text = "tanh(x)";
+            this.sqrtToolStripMenuItem.Name = "sqrtToolStripMenuItem";
+            this.sqrtToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sqrtToolStripMenuItem.Text = "√x";
+            this.sqrtToolStripMenuItem.Click += new System.EventHandler(this.functionToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -690,6 +698,7 @@
         private System.Windows.Forms.ToolStripMenuItem xyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem piToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sqrtToolStripMenuItem;
     }
 
 }
